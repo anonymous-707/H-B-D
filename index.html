@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Responsive Birthday Card</title>
 	<style type="text/css">
 		body {
 			height: 100%;
 			margin: 0;
 			background-repeat: no-repeat;
 			background-attachment: fixed;
-			background-color: #56055e; /* Light blue background */
+			background-color: #56055e; /* Purple background */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			font-family: 'Arial', sans-serif;
 		}
 
 		.card {
 			position: relative;
-			width: 300px;
-			height: 425px;
+			width: 90%; /* Default width for mobile */
+			max-width: 350px; /* Limit maximum width for larger screens */
+			height: auto;
 			border: 10px solid #9612eb;
-			margin: 60px auto 0 auto;
+			margin: 20px auto;
 			box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
 			background-image: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
 			background-position: center; /* Center the image */
@@ -26,29 +32,33 @@
 		}
 
 		.card .text-container {
-			width: 80%;
-			height: 80%;
-			margin: auto;
-		}
-
-		.strikethrough {
-			text-decoration: line-through;
+			width: 90%;
+			height: auto;
+			margin: 20px auto;
+			text-align: center;
 		}
 
 		.card .text-container #head {
 			font-family: 'Nobile', sans-serif;
 			font-size: 1.5em;
-			margin: 60px auto 60px auto;
+			margin-bottom: 20px;
+			color: #331717;
 		}
 
 		.card p {
 			font-size: 1.1em;
 			line-height: 1.4;
-			font-family: 'Nobile';
+			font-family: 'Nobile', sans-serif;
 			color: #331717;
 			font-style: italic;
 			text-align: center;
-			margin: 30px auto 0px auto;
+			margin: 10px auto;
+		}
+
+		.card h5 {
+			font-size: 1.3em;
+			color: #9612eb;
+			margin-bottom: 10px;
 		}
 
 		.card .front {
@@ -96,12 +106,47 @@
 		.imgset {
 			position: relative;
 			z-index: 1;
-			margin-bottom: -215px;
+			margin-bottom: -200px;
 		}
 
 		.imgset img {
 			box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
 			border-radius: 5px;
+			width: 100%;
+			height: 395px;
+		}
+
+		/* Responsive Design */
+		@media (min-width: 768px) {
+			.card {
+				width: 60%;
+				max-width: 400px;
+			}
+			.card .text-container #head {
+				font-size: 2em;
+			}
+			.card p {
+				font-size: 1.2em;
+			}
+			.card h5 {
+				font-size: 1.5em;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.card {
+				width: 40%;
+				max-width: 450px;
+			}
+			.card .text-container #head {
+				font-size: 2.5em;
+			}
+			.card p {
+				font-size: 1.3em;
+			}
+			.card h5 {
+				font-size: 1.7em;
+			}
 		}
 	</style>
 </head>
@@ -110,14 +155,14 @@
   <div class="back"></div>
   <div class="front">
     <div class="imgset">
-         <img width="100%" src="ffront.jpeg">
+         <img src="ffront.jpeg" alt="Front Image">
        </div>
   </div>
   <div class="text-container">
-    <p id="head">Happy  Pre Birthday Sweetie!</p>
+    <p id="head">Happy Pre-Birthday Sweetie!</p>
     <h5>Meri Jaawwnn!</h5>
-    <p>Meray jigar kay tukray... Wising you the Happiest Pre Birthday. You are the best person in my life. I feel soo happy to have you my Sweetheart...💕</p>
-    <p>Love u soooooooo much!</p>
+    <p>Meray jigar kay tukray... Wishing you the Happiest Pre-Birthday. You are the best person in my life. I feel so happy to have you as my Sweetheart...💕</p>
+    <p>Love you soooooooo much!</p>
   </div>
 </div>
 </body>
