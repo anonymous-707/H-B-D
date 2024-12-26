@@ -14,12 +14,16 @@
 			align-items: center;
 			flex-direction: column;
 			font-family: 'Arial', sans-serif;
+
+			padding: 0;
+            font-family: 'Arial', sans-serif;
+			min-height: 100vh;
 		}
 
 		.card {
 			position: relative;
 			width: 90%; /* Default width for mobile */
-			max-width: 350px; /* Limit maximum width for larger screens */
+			max-width: 400px; /* Limit maximum width for larger screens */
 			height: auto;
 			border: 10px solid #9612eb;
 			margin: 20px auto;
@@ -31,40 +35,84 @@
 			background-color: #e6f0e6;
 		}
 
+		.card {
+
+			position: relative;
+
+            /* border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+            /* overflow:hidden; */
+            /* text-align: center; */
+            /* margin: 20px; */
+            /* transition: all 0.3s ease-in-out; */
+        }
+
+		.text-container{
+			width: 450px;
+			height: 395px;
+		}
+
+		.card{
+			width: 450px;
+			height: 390px;
+		}
+
 		.card .text-container {
 			width: 90%;
 			height: auto;
+
+			/* width: 450px;
+			height: 395px; */
+
 			margin: 20px auto;
 			text-align: center;
 		}
 
 		.card .text-container #head {
-			font-family: 'Nobile', sans-serif;
+			font-family: Georgia, 'Times New Roman', Times, serif ;
 			font-size: 1.5em;
 			margin-bottom: 20px;
-			color: #331717;
+			color: #0a031a;
+
+			/* width: 450px;
+			height: 395px; */
 		}
 
 		.card p {
 			font-size: 1.1em;
-			line-height: 1.4;
+			line-height: 1.35;
 			font-family: 'Nobile', sans-serif;
 			color: #331717;
 			font-style: italic;
 			text-align: center;
-			margin: 10px auto;
+			margin: 3px auto;
+
+			/* width: 450px;
+			height: 395px; */
+			
 		}
 
 		.card h5 {
-			font-size: 1.3em;
+			font-size: 1.5em;
 			color: #9612eb;
 			margin-bottom: 10px;
 		}
 
+		.card h1 {
+			font-size: 1.1em;
+			color: #331717;
+			margin-bottom: 10px;
+			text-align: left;
+		}
+
 		.card .front {
 			position: absolute;
-			width: 100%;
-			height: 100%;
+			/* width: 100%;
+			height: 100%; */
+
+			width: 450px;
+			height: 395px;
+
 			margin: -10px 0px 0px -10px;
 			border: 10px solid #9612eb;
 			backface-visibility: hidden;
@@ -85,12 +133,17 @@
 			transform: perspective(800px) rotateY(-170deg);
 			box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
 			background-color: #d2dcd2;
-		}
 
+			
+		}
 		.card .back {
 			position: absolute;
-			width: 100%;
-			height: 100%;
+			/* width: 100%;
+			height: 100%; */
+
+			width: 445px;
+			height: 390px;
+
 			border: 10px solid #9612eb;
 			margin: -10px 0px 0px -10px;
 			backface-visibility: visible;
@@ -117,7 +170,7 @@
 		}
 
 		/* Responsive Design */
-		@media (max-width: 300px) {
+		/* @media (max-width: 300px) {
 			.card {
 				width: 60%;
 				max-width: 400px;
@@ -148,7 +201,7 @@
 			.card h5 {
 				font-size: 1.7em;
 			}
-		}
+		} */
 	</style>
 </head>
 <body>
@@ -156,15 +209,127 @@
   <div class="back"></div>
   <div class="front">
     <div class="imgset">
-         <img src="Wishing You A Very Happy Birthday.jpg" alt="Front Image">
+         <img src="A Very Happy Birthday.jpg" alt="Front Image">
        </div>
   </div>
   <div class="text-container">
     <p id="head">Happy Pre-Birthday Sweetie!</p>
     <h5>Meri Jaawwnn!</h5>
-    <p>Meray jigar kay tukray... Wishing you the Happiest Pre-Birthday. You are the best person in my life. I feel so happy to have you as my Sweetheart...💕</p>
+    <h1>Meray jigar kay tukray... </h1> 
+	<p>Wishing you the Happiest Pre-Birthday. 
+		You are the best person in my life. 
+		You are my only reason to smile. 
+		You are the most important person in my life. 
+		Please keep smiling, just because i love to see you smile. 
+		I'm luckiest person of the world to have you in my life.
+		I feel so happy to have you as my Sweetheart...💕</p>
     <p>Love you soooooooo much!</p>
   </div>
 </div>
 </body>
 </html>
+
+
+
+
+    <style>
+        /* General Reset */
+        /* body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #56055e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        } */
+
+        /* .card {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255), rgba(255, 255, 255, 0.5)), url("https://images.unsplash.com/photo-1527481138388-31827a7c94d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            border: 10px solid #9612eb;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            margin: 20px;
+            transition: all 0.3s ease-in-out;
+        } */
+
+        /* .card:hover {
+            transform: scale(1.05);
+        } */
+
+        /* .text-container {
+            padding: 20px;
+            color: #331717;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        } */
+
+        /* .text-container #head {
+            font-size: 1.8em;
+            color: #331717;
+            margin-bottom: 15px;
+            font-family: 'Nobile', sans-serif;
+        } */
+
+        /* .text-container h5 {
+            font-size: 1.5em;
+            color: #9612eb;
+            margin-bottom: 10px;
+        } */
+
+        /* .text-container p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #331717;
+            margin: 10px 0;
+            font-style: italic;
+        } */
+
+        /* Responsive Design */
+        /* @media (max-width: 600px) {
+            .card {
+                width: 90%;
+            }
+
+            .text-container #head {
+                font-size: 1.5em;
+            }
+
+            .text-container h5 {
+                font-size: 1.3em;
+            }
+
+            .text-container p {
+                font-size: 1em;
+            }
+        } */
+
+        /* @media (min-width: 900px) {
+            .card {
+                max-width: 500px;
+            }
+
+            .text-container #head {
+                font-size: 2.2em;
+            }
+
+            .text-container h5 {
+                font-size: 1.8em;
+            }
+
+            .text-container p {
+                font-size: 1.2em;
+            }
+        } */
+
+    </style>
+
